@@ -1,0 +1,35 @@
+/* css/print.css */
+
+/* Esconde elementos que não queremos na impressão */
+@media print {
+    body {
+        background-color: #fff; /* Fundo branco para economizar tinta */
+    }
+
+    .site-header, 
+    .container > h1, 
+    .container > hr:first-of-type,
+    .filter-form,
+    .print-button {
+        display: none !important; /* Esconde o cabeçalho, título, formulário e botão de imprimir */
+    }
+
+    main.container {
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    table {
+        margin-top: 0;
+        font-size: 12px; /* Fonte menor para caber mais na página */
+    }
+
+    .dashboard-menu {
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
